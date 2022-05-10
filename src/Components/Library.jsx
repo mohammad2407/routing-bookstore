@@ -3,11 +3,11 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
 import './library.css'
-export const api = "http://localhost:3002/Data";
+
 export const Library = () => {
     const[bookData,setBookData] = useState([])
     useEffect(() =>{
-        fetch(api)
+        fetch("http://localhost:3002/Data")
         .then((res) => (res.json()))
         .then((res) => setBookData(res))
     },[])

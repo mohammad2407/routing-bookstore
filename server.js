@@ -1,15 +1,10 @@
-const jsonSever = require("json-server")
-const server = jsonSever.create()
-const router = jsonSever.router("./db.json");
-const middlewares = jsonSever.defaults({
-    static: "./build"
-})
-const port = process.env.PORT || 3002;
-server.use(middlewares);
-server.use(jsonSever.rewriter({
-    "/http://localhost:3002/Data/*":"$1",
-})
-)
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json'); // <== Will be created later
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 3002; // <== You can change the port
 
+server.use(middlewares);
 server.use(router);
-server.listen(port, () => console.log(`server is running on ${port}`))
+
+server.listen(port);

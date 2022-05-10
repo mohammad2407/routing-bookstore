@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
-
+import './library.css'
 export const Library = () => {
     const[bookData,setBookData] = useState([])
     useEffect(() =>{
@@ -14,7 +14,8 @@ export const Library = () => {
     console.log(bookData)
   return (
     <div>
-         <div style={{  width: '70%', margin: 'auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', float: 'right', padding: '1%' }}>
+        <p style={{color:'GrayText', fontSize:'43px'}}>Library: The joy of Learning</p>
+         <div style={{  width: '90%', margin: 'auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', padding: '1%' }}>
                 {
                     bookData.map((book, index) => {
                         return (

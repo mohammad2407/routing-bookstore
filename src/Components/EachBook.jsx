@@ -15,11 +15,12 @@ export const EachBook = () => {
     console.log(book)
     return (
         <div>
+            <p style={{fontSize:'40px', color:'GrayText'}}>More About this book</p>
             <div style={{ width: '90%', display: 'flex', margin: '4% 0%' }}>
                 <div style={{ width: '30%', margin: '10px 70px' }}>
                     <img src={book.image} style={{ width: '100%' }} alt="" />
                 </div>
-                <div style={{ width: '75%', border: '1px solid yellow', textAlign: 'left' }}>
+                <div style={{ width: '75%', background:'#e8e5e5', textAlign: 'left' }}>
                     <div style={{ fontSize: '40px', color: '#e30046',margin:'10px' }}>
                         {book.title}
                     </div>

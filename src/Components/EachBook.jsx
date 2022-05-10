@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { useParams } from 'react-router'
+import { api } from './Library';
 export const EachBook = () => {
     const { id } = useParams()
     console.log(id)
     const [book, setSingleBook] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:3002/Data/${id}`)
+        fetch(`api/${id}`)
             .then((res) => res.json())
             .then(response => setSingleBook(response))
     }, [])

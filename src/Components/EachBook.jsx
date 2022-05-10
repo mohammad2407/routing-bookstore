@@ -9,7 +9,7 @@ export const EachBook = () => {
     const [book, setSingleBook] = useState([])
 
     useEffect(() => {
-        fetch(`"http://localhost:3002/Data"/${id}`)
+        fetch(`https://library-u6.herokuapp.com//${id}`)
             .then((res) => res.json())
             .then(response => setSingleBook(response))
     }, [])

@@ -7,7 +7,7 @@ import './library.css'
 export const Library = () => {
     const[bookData,setBookData] = useState([])
     useEffect(() =>{
-        fetch("https://library-u6.herokuapp.com/")
+        fetch("https://library-u6.herokuapp.com/Data")
         .then((res) => (res.json()))
         .then((res) => setBookData(res))
     },[])

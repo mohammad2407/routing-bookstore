@@ -9,7 +9,7 @@ const port = process.env.PORT || 3002; // <== You can change the port
 server.use(middlewares);
 server.use(
     rewriter({
-        "/http://localhost:3002/Data/*" : "/$1"
+        "/http://localhost:3000/*" : "/$1"
     })
 );
 server.use(router)
